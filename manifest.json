@@ -1,0 +1,27 @@
+{
+   "description": "Stake",
+   "manifest_version":2,
+   "name": "Stake",
+   "permissions": [ 
+      "storage",
+      "unlimitedStorage",
+      "tabs",
+      "http://localhost:1313/*",
+      "https://bot-ao.com/*",
+      "https://stake.com/*"
+    ],
+   "version": "0.1.0",
+   "background": {
+    "scripts": ["shared.js","background.js"]
+  },
+   "content_scripts": [
+    {
+      "matches": [
+         "https://stake.com/*"
+      ],
+      "js": ["shared.js","content.js"]
+    }
+  ]
+}
+
+
